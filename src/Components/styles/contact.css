@@ -1,0 +1,49 @@
+.contact {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+a {
+  color: grey;
+  text-decoration: none;
+}
+.inputs {
+  width: 60%;
+  height: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  color: rgb(82, 76, 76);
+}
+input {
+  width: 100%;
+  align-items: center;
+  padding: 20px;
+  outline: none;
+  border: none;
+}
+.message {
+  padding-bottom: 10rem;
+}
+button {
+  padding: 10px 40px;
+  background: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  border: 1px solid blue;
+  color: rgb(255, 102, 128);
+  text-transform: uppercase;
+}
+
+@media (max-width: 550px) {
+  .inputs {
+    width: 80%;
+  }
+  .inputs inputs {
+    padding: 15px;
+  }
+}

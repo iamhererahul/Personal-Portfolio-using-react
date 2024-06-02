@@ -1,0 +1,137 @@
+.main {
+  min-height: 100vh;
+  max-width: 100%;
+  position: relative;
+}
+
+main::before,
+main::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+main::before {
+  clip-path: polygon(100% 33%, 0% 100%, 100% 100%);
+  background: linear-gradient(
+    45deg,
+    rgba(255, 83, 44, 0.085),
+    rgba(80, 5, 255, 0.126)
+  );
+  width: 100%;
+  height: 100%;
+}
+
+.main_container {
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-image: url(../assets/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main_content {
+  margin-left: 3.445rem;
+}
+.text {
+  line-height: 55px;
+  margin-top: 35px;
+}
+.text p {
+  color: rgb(157, 155, 155);
+  text-transform: uppercase;
+  font-size: 22px;
+}
+.text h1 {
+  font-size: 50px;
+  text-transform: uppercase;
+}
+.icons {
+  display: flex;
+}
+.icons .icon {
+  margin-top: 1rem;
+  margin-right: 1.4rem;
+  font-size: 35px;
+  cursor: pointer;
+  color: rgb(157, 155, 155);
+}
+.icons .icon:hover {
+  color: red;
+}
+.main__img {
+  max-width: 300px;
+  margin-right: 500px;
+}
+.main__img img {
+  filter: drop-shadow(10px 15px 30px rgb(255, 126, 180, 0.8));
+  height: 370px;
+  width: 400px;
+  margin-left: 300px;
+  margin-top: 50px;
+  border-radius: 50%;
+}
+.buttons button {
+  padding: 15px 40px;
+  margin-top: 2rem;
+  margin-right: 1rem;
+  background: linear-gradient(25deg, rgb(1, 60, 210, 0.753), rgb(255, 72, 6));
+  color: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+.main__container.active {
+  background: red;
+}
+@media (max-width: 1200px) {
+  .text {
+    white-space: nowrap;
+    line-height: 30px;
+  }
+  .text p {
+    font-size: 14px;
+  }
+  .text h1 {
+    font-size: 30px;
+  }
+  .buttons button {
+    padding: 8px 20px;
+  }
+  .icons {
+    margin-right: 1rem;
+  }
+  .icons .icon {
+    font-size: 25px;
+  }
+}
+@media (max-width: 600px) {
+  .main_content {
+    margin-left: 0;
+  }
+  .main__container {
+    text-align: center;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .main__img img {
+    width: 250px;
+  }
+  .text h1 {
+    font-size: 23px;
+  }
+  .text p {
+    color: #000;
+    font-size: 11px;
+  }
+  .icons {
+    margin-left: 2rem;
+  }
+  .icons .icon {
+    color: firebrick;
+  }
+}
